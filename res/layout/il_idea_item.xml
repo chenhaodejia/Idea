@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/radius_white_rangle"
+    android:padding="@dimen/idea_item_margin" >
+
+    <com.pp.idea.view.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/item_avatar_width"
+        android:layout_height="@dimen/item_avatar_width"
+        android:scaleType="centerCrop"
+        android:src="@drawable/detail_portrait_default"
+        app:border_color="@color/bg_body"
+        app:border_width="0dp" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_avatar"
+        android:layout_alignParentRight="true"
+        android:text="1分钟前"
+        android:textColor="@color/text_gray_color"
+        android:textSize="@dimen/text_dimen_12" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignBottom="@id/iv_avatar"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/tv_date"
+        android:layout_toRightOf="@id/iv_avatar"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="创意大神"
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/text_dimen_14" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/tv_name"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:singleLine="true"
+            android:text="我是标题，哈哈哈哈哈哈哈哈哈哈好"
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/text_dimen_16" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_avatar"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/iv_avatar"
+        android:ellipsize="end"
+        android:maxLines="5"
+        android:text="我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容"
+        android:textColor="@color/text_little_black_color"
+        android:textSize="@dimen/text_dimen_14" />
+
+    <com.pp.idea.view.MyGridView
+        android:id="@+id/gv_pic"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/iv_avatar"
+        android:horizontalSpacing="@dimen/dimen_3"
+        android:numColumns="4"
+        android:verticalSpacing="@dimen/dimen_3" />
+
+    <LinearLayout
+        android:id="@+id/ll_comment_num"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gv_pic"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/iv_avatar"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_lignt_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1283人点灯"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/text_dimen_12" />
+
+        <TextView
+            android:id="@+id/tv_comment_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="203条评论"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/text_dimen_12" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_comment_num"
+        android:layout_toRightOf="@id/iv_avatar" >
+
+        <ImageView
+            android:id="@+id/tv_operator_support"
+            android:layout_width="@dimen/idea_operator_width"
+            android:layout_height="@dimen/idea_operator_width"
+            android:src="@drawable/selector_support_idea" />
+
+        <ImageView
+            android:id="@+id/tv_operator_unsupport"
+            android:layout_width="@dimen/idea_operator_width"
+            android:layout_height="@dimen/idea_operator_width"
+            android:layout_toRightOf="@id/tv_operator_support"
+            android:src="@drawable/selector_unsupport_idea" />
+
+        <ImageView
+            android:id="@+id/tv_operator_comment"
+            android:layout_width="@dimen/idea_operator_width"
+            android:layout_height="@dimen/idea_operator_width"
+            android:layout_toRightOf="@id/tv_operator_unsupport"
+            android:background="@drawable/selector_bg"
+            android:src="@drawable/operation_comments" />
+
+        <ImageView
+            android:id="@+id/tv_operator_more"
+            android:layout_width="@dimen/idea_operator_width"
+            android:layout_height="@dimen/idea_operator_width"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_bg"
+            android:src="@drawable/operation_more" />
+    </RelativeLayout>
+
+</RelativeLayout>

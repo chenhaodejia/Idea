@@ -1,0 +1,157 @@
+<com.pp.idea.view.DragLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dl"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_menu" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <!-- user title -->
+
+        <RelativeLayout
+            android:id="@+id/rl_user"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/menu_avatar_width"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp" >
+
+            <com.pp.idea.view.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/menu_avatar_width"
+                android:layout_height="@dimen/menu_avatar_width"
+                android:scaleType="centerCrop"
+                android:src="@drawable/detail_portrait_default"
+                app:border_color="@color/bg_menu"
+                app:border_width="0dp" />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                style="@style/HomeMenuText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:ellipsize="middle"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/iv_avatar"
+                android:text="登录" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/tv_user_name"
+                android:src="@drawable/sidebar_arrow_normal" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_user"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingTop="30dp" >
+
+            <!-- 发现 创意 -->
+
+            <RelativeLayout
+                android:id="@+id/menu_find"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical" >
+
+                <TextView
+                    style="@style/HomeMenuText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发现创意" />
+            </RelativeLayout>
+            <!-- 讨论创意 -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical" >
+
+                <TextView
+                    style="@style/HomeMenuText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="讨论创意" />
+            </RelativeLayout>
+            <!-- 发布 -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:id="@+id/menu_my_idea"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical" >
+
+                <TextView
+                    style="@style/HomeMenuText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的创意" />
+            </RelativeLayout>
+            <!-- 收藏 -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:id="@+id/menu_collect"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical" >
+
+                <TextView
+                    style="@style/HomeMenuText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收藏" />
+            </RelativeLayout>
+            <!-- 设置 -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:id="@+id/menu_setting"
+                android:layout_gravity="center_vertical" >
+
+                <TextView
+                    style="@style/HomeMenuText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置" />
+            </RelativeLayout>
+            <!-- 推荐 -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:id="@+id/menu_tuijian"
+                android:layout_gravity="center_vertical" >
+
+                <TextView
+                    style="@style/HomeMenuText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="推荐" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.pp.idea.view.MyRelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffaa00" >
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.pp.idea.view.MyRelativeLayout>
+
+</com.pp.idea.view.DragLayout>

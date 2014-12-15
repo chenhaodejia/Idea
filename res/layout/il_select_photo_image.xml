@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_body" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/bg_title" >
+
+        <ImageView
+            android:id="@+id/title_back"
+            android:layout_width="@dimen/title_height"
+            android:layout_height="@dimen/title_height"
+            android:src="@drawable/selector_title_back" />
+
+        <TextView
+            android:id="@+id/title_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="取消"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_dimen_14" />
+
+        <TextView
+            android:id="@+id/title_text"
+            style="@style/TitleTextStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/title_cancel"
+            android:layout_toRightOf="@id/title_back"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="选择相册" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_buttom"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/buttom_height"
+        android:layout_alignParentBottom="true"
+        android:background="#f3f3f3" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_color" />
+
+        <RelativeLayout
+            android:id="@+id/photo_look"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/selector_photo_look" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg"
+                android:id="@+id/tv_photo_look"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:text="预览"
+                android:textColor="@color/selector_photo_look_text"
+                android:textSize="@dimen/text_dimen_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/photo_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_photo_sure" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg"
+                android:paddingBottom="5dp"
+                android:id="@+id/tv_photo_sure"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:text="确定"
+                android:textColor="@color/selector_photo_sure_text"
+                android:textSize="@dimen/text_dimen_14" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gv_photos"
+        style="@style/PhotosGridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_buttom"
+        android:layout_below="@id/rl_title"
+        android:columnWidth="105dp" />
+
+    <ImageView
+        android:id="@+id/iv_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/loading"
+        android:visibility="gone" />
+
+</RelativeLayout>

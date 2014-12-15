@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black" >
+
+    <com.pp.idea.view.photoview.PhotoView
+        android:id="@+id/iv_content_image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible" />
+    
+     <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/pic_card_lucency_hd"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/et_content_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:gravity="left|top"
+        android:hint="点击输入图片描述"
+        android:lines="4"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/et_content_desc"
+        android:layout_alignLeft="@id/et_content_desc"
+        android:layout_alignRight="@id/et_content_desc"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pic_contents_symbol" />
+
+</RelativeLayout>

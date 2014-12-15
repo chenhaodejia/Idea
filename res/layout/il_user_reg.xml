@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_body"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/bg_title" >
+
+        <ImageView
+            android:id="@+id/title_back"
+            android:layout_width="@dimen/title_height"
+            android:layout_height="@dimen/title_height"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_title_back" />
+
+        <TextView
+            style="@style/TitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="注册" />
+
+        <TextView
+            android:layout_width="0.1dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_find_psd"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_login_et_bg"
+            android:hint="请使用常用邮箱注册"
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/text_dimen_14" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/selector_login_et_bg"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/text_dimen_14" />
+        <EditText
+            android:id="@+id/et_password_again"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/selector_login_et_bg"
+            android:hint="请再次输入密码"
+            android:inputType="textPassword"
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/text_dimen_14" />
+    </LinearLayout>
+    
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/radius_green_rangle" >
+
+        <TextView
+            android:id="@+id/tv_user_reg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_drak_bg"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="注    册"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_dimen_18" />
+
+    </RelativeLayout>
+
+</LinearLayout>

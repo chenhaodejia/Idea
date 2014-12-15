@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    android:padding="5dp" >
+
+    <com.pp.idea.view.photoview.PhotoView
+        android:id="@+id/iv_photo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/default_iv_loading"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_photo"
+        android:gravity="center_vertical" >
+
+        <!-- 上面的信息 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="相册" />
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_marginTop="10dp"
+                android:text="已发布" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
